@@ -25,7 +25,7 @@ const NavLinks = ({ handleClick }) => (
       <NavLink
         key={item.name}
         to={item.to}
-        className="flex flex-row justify-start items-center my-8 text-sm font-medium text-gray-400 hover:text-cyan-400"
+        className="flex flex-row justify-start items-center my-8 text-sm font-medium text-gray-200 hover:text-green-700 transition-all duration-500"
         onClick={() => handleClick && handleClick()}
       >
         <item.icon className="w-6 h-6 mr-2" />
@@ -40,7 +40,7 @@ const Sidebar = () => {
 
   return (
     <>
-      <div className="md:flex hidden flex-col w-[240px] py-10 px-4 bg-[#191624]">
+      <div className="md:flex hidden flex-col w-[250px] py-10 px-4 bg-[#162418]">
         {/* <img src={logo} alt="logo" className="w-full h-14 object-contain" /> */}
         <p className="text-center text-white text-3xl font-semibold">Boogify</p>
         <NavLinks />
@@ -61,8 +61,9 @@ const Sidebar = () => {
         )}
       </div>
 
+      {/* Need something here  */}
       <div
-        className={`absolute top-0 h-screen w-2/3 bg-gradient-to-tl from-white/10 to-[#483D8B] backdrop-blur-lg z-10 p-6 md:hidden smooth-transition ${
+        className={`absolute top-0 h-screen w-2/3 bg-gradient-to-tl from-white/10 to-[#3d8b4a] backdrop-blur-lg z-10 p-6 md:hidden smooth-transition ${
           mobileMenuOpen ? "left-0" : "-left-full"
         }`}
       >
